@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Connect and initialize all links-->
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,102 +15,103 @@
     <title>Weather Cast</title>
 </head>
 <!-- Contains main body -->
-
 <body>
     <!-- Main Header -->
-    <header class="p-5 text-center text-white bg-primary">
-        <h1>Weather Dashboard</h1>
+    <header class="p-4 text-center text-white bg-primary">
+        <h1>WEATHER CHANNEL</h1>
     </header>
     <!-- Main Container -->
-    <div class="container-fluid custom-con">
-        <!-- Search Button and Current Weather -->
-        <div class="row">
-            <!-- Search Bar -->
-            <div class="container col-3 left">
+    <div class="container-fluid custom-con" style="padding: 10px;">
+        <!-- Search Bar -->
+        <div class="col-12 bd-sidebar border border-dark" style = "padding: 10px;">
+            <div class=" col">
                 <h5>Search for a City</h5>
                 <div class="container-fluid">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id = "searchBAR">
+                        <button class="btn btn-outline-success searchBTN" type="submit">Search</button>
                     </form>
                 </div>
                 <!-- Add buttons here from JS -->
-                <div class="btn-group-vertical">
-                </div>
-            </div>
-            <!-- Current Weather Display -->
-            <div class="card col 9">
-                <div class="card-header">City Name</div>
-                <div class="card-body">
-                    <ul>
-                        <li class="temp">Temp: </li>
-                        <li class="wind">Wind: </li>
-                        <li class="Humidity">Humidity: </li>
-                        <li class="UV Index">UV Index: </li>
-                    </ul>
+                <div class="btn-group-vertical newButtons" style="padding: 10px;">
+                    
                 </div>
             </div>
         </div>
-        <div class="row"><h2> 5 DAY FORCAST</h2></div>
-         <!-- 5 Day Weather Display -->
-        <div class="row days-card">
-            <div class="col-sm-2 days">
+        <!-- Current Day -->
+        <div class="col-12 border border-dark" style="background-color:white;">
+            <div class="card-body">
+                <h5 class="card-title date">12/20/21</h5>
+                <ul>
+                    <li class="icon">ICON</li>
+                    <li class="temp">TEMP</li>
+                    <li class="wind">WIND</li>
+                    <li class="humidity">HUMIDITY</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 border border-dark" style="background-color:white; padding: 15px;">
+            <div class="row">
+                <div class="col-12 col-md-3 col-xl-2 days" style="padding:15px;">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">12/20/21</h5>
+                            <p>ICON</p>
+                            <p>Temp: </p>
+                            <p>Wind: </p>
+                            <p>Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 col-xl-2 days" style="padding:15px;">
                 <div class="card text-white bg-primary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">12/20/21</h5>
-                        <p>ICON</p>
-                        <p>Temp: </p>
-                        <p>Wind: </p>
-                        <p>Humidity: </p>
+                        <div class="card-body">
+                            <h5 class="card-title">12/21/21</h5>
+                            <p>ICON</p>
+                            <p>Temp: </p>
+                            <p>Wind: </p>
+                            <p>Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 col-xl-2 days" style="padding:15px;">
+                <div class="card text-white bg-primary mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">12/22/21</h5>
+                            <p>ICON</p>
+                            <p>Temp: </p>
+                            <p>Wind: </p>
+                            <p>Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 col-xl-2 days" style="padding:15px;">
+                <div class="card text-white bg-primary mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">12/23/21</h5>
+                            <p>ICON</p>
+                            <p>Temp: </p>
+                            <p>Wind: </p>
+                            <p>Humidity: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 col-xl-2 days" style="padding:15px;">
+                <div class="card text-white bg-primary mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">12/24/21</h5>
+                            <p>ICON</p>
+                            <p>Temp: </p>
+                            <p>Wind: </p>
+                            <p>Humidity: </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2 days">
-               <div class="card text-white bg-primary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">12/21/21</h5>
-                        <p>ICON</p>
-                        <p>Temp: </p>
-                        <p>Wind: </p>
-                        <p>Humidity: </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2 days">
-               <div class="card text-white bg-primary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">12/22/21</h5>
-                        <p>ICON</p>
-                        <p>Temp: </p>
-                        <p>Wind: </p>
-                        <p>Humidity: </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2 days">
-               <div class="card text-white bg-primary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">12/23/21</h5>
-                        <p>ICON</p>
-                        <p>Temp: </p>
-                        <p>Wind: </p>
-                        <p>Humidity: </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2 days">
-               <div class="card text-white bg-primary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">12/24/21</h5>
-                        <p>ICON</p>
-                        <p>Temp: </p>
-                        <p>Wind: </p>
-                        <p>Humidity: </p>
-                    </div>
-                </div>
-            </div>
+        
         </div>
-    </div>
+
+        
     <!-- Connecting all Java Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
