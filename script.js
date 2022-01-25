@@ -31,6 +31,7 @@ display();
 
 // Eixisting Button Listener
 newButtonsEL.on("click",function(event){
+  event.preventDefault();
   console.log(event.target);
   cityNameP = event.target.id;
   console.log(cityNameP);
@@ -42,7 +43,7 @@ newButtonsEL.on("click",function(event){
 //SEARCH BUTTON 
 searchBTNEL.on("click", function (event) {
   event.preventDefault();
-  cityNameP = searchBarEL.val.trim(); //Get value
+  cityNameP = searchBarEL.val().trim(); //Get value
   recentS.push(cityNameP);//update array 
   localStorage.setItem('cityNames', JSON.stringify(recentS));//store in local 
   newButtonsEL.append('<button class="btn btn-primary" type="button">' + cityNameP + '</button>');//create button
@@ -60,6 +61,7 @@ function callAPI() {
     })//required 
     .then(function (data) { //Store this and create buttons in local Storage 
       //ICON
+      console.log(data);
       var iconE = data.weather[0].icon;
       var urlICON = "http://openweathermap.org/img/wn/" + iconE + "@2x.png";
       iconIMGDIVEL.append('<img alt = "Weather Icon" class="weatherIconI">').attr('src', urlICON);
